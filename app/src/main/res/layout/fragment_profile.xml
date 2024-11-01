@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="25dp"
+    tools:context=".ProfileFragment">
+
+    <TextView
+        android:id="@+id/updateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Profile"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Email"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="100dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toBottomOf="@id/updateProfile"
+        app:layout_constraintStart_toStartOf="@+id/updateProfile"
+        app:layout_constraintEnd_toEndOf="@id/updateProfile"
+        tools:layout_editor_absoluteX="25dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEt"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your Name..."
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/emailLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailLayout"
+        app:layout_constraintTop_toBottomOf="@+id/emailLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEt"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/locationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your Location..."
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/nameLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/nameLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/locationEt"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Update"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="50dp"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:cornerRadius="10dp"
+        app:strokeColor="#833333"
+        app:strokeWidth="3dp"
+        app:layout_constraintEnd_toEndOf="@+id/locationLayout"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/locationLayout"
+        app:layout_constraintTop_toBottomOf="@+id/locationLayout"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/updateBtn"
+        app:layout_constraintStart_toStartOf="@+id/updateBtn"
+        app:layout_constraintTop_toBottomOf="@id/updateBtn"
+        tools:layout_editor_absoluteY="548dp">
+
+        <ImageView
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:src="@drawable/home"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="577dp" />
+
+        <ImageView
+            android:id="@+id/logoutBtn"
+            android:layout_width="41dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:src="@drawable/logout"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="577dp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
